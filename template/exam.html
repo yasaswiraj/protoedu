@@ -178,8 +178,8 @@
       </nav>
       <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper2" id="myDIV">
-          <div class="questions">
+        <div class="content-wrapper2">
+          <div class="questions" id="myDIV">
             <br>
             <h1>Let's go!</h1>
             <br>
@@ -191,12 +191,56 @@
             <br>
             <br>
           </div>
+          <div class="qna" id="math">
+            <br>
+            <h1>Mathematics</h1>
+            <br>
+            <div class="question">
+              <h4>Q1) What is the area of a rectangle with length 10 cm and breath 25cm? </h4>
+              <hr class="bs-hr">
+              <div class="options" onclick="selected()">
+                <h6>70 cm</h6>
+                <div id="opt" class="overlay">
+                  <img src="BG.png" alt="">>
+                </div>
+              </div>
+              <div class="options" onclick="selected()">
+              <h6>250 cm^2</h6>
+                <div id="opt" class="overlay">
+                  <img src="BG.png" alt="">>
+                </div>
+              </div>
+              <div class="options" onclick="selected()">
+              <h6>250 cm</h6>
+                <div class="overlay">
+                  <img src="BG.png" alt="">>
+                </div>
+              </div>
+              <div class="options" onclick="selected()">
+              <h6>70 cm^2</h6>
+                <div class="overlay">
+                  <img src="BG.png" alt="">>
+                </div>
+              </div>
+              <br>
+              <br>
+            </div>
+            <div class="ns" id="prev">
+              <h4>previous</h4>
+            </div>
+            <div class="ns">
+              <h4>next</h4>
+            </div>
+            <div class="ns" style="Color:lightgreen;">
+              <h4 style="text-shadow: 1px 1px 2px #000000;">submit</h4>
+            </div>
+          </div>
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href="https://www.templatewatch.com/" target="_blank" class="text-muted">Edukare</a>. All rights reserved.</span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.templatewatch.com/" target="_blank" class="text-muted">Edukare</a>. All rights reserved.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <i class="icon-heart"></i></span>
           </div>
         </footer>
@@ -235,7 +279,9 @@
   <script>
 function mathFunction() {
   var x = document.getElementById("myDIV");
+  var y = document.getElementById("math");
     x.style.display = "none";
+    y.style.display = "inline-block";
 }
 function phyFunction() {
   var x = document.getElementById("myDIV");
@@ -245,6 +291,62 @@ function chemFunction() {
   var x = document.getElementById("myDIV");
     x.style.display = "none";
 }
+function selected() {
+  var x = document.getElementById("opt");
+    x.style.width = "100%";
+}
 </script>
+<style media="screen">
+.qna{
+  display: none;
+  opacity: 70%;
+  width: 90%;
+  margin-top: 8%;
+  height: auto;
+  position: center center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+}
+.options{
+  opacity: 70%;
+  width: 15%;
+  margin-top: 3%;
+  height: 5%;
+  margin-left: 3%;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  border-radius: 5px;
+  height: 100%;
+  transition: .5s ease;
+}
+.options:hover .overlay{
+  width: 100%;
+  cursor: pointer;
+}
+.options:hover h6{
+  color: black;
+  cursor: pointer;
+}
+.ns{
+  margin-left: 35%;
+  float: left;
+}
+.ns:hover h4{
+  color: black;
+  cursor: pointer;
+}
+#prev{
+  margin-left: 3%;
+}
+</style>
 </body>
 </html>
