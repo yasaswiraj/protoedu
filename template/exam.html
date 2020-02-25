@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Edukare Admin</title>
+  <title>Exam time</title>
   <!-- base:css -->
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/feather/feather.css">
@@ -178,16 +178,16 @@
       </nav>
       <!-- partial -->
       <div class="main-panel">
-        <div class="content-wrapper2">
+        <div class="content-wrapper2" id="myDIV">
           <div class="questions">
             <br>
             <h1>Let's go!</h1>
             <br>
             <h4>select your subject</h4>
             <hr class="bs-hr">
-            <button class="Bs" type="button" name="button">MATHS</button>
-            <button class="Bs" type="button" name="button">PHYSICS</button>
-            <button class="Bs" type="button" name="button">CHEMISTRY</button>
+            <button onclick="mathFunction()" class="Bs" type="button" name="button">MATHS</button>
+            <button onclick="phyFunction()" class="Bs" type="button" name="button">PHYSICS</button>
+            <button onclick="chemFunction()" class="Bs" type="button" name="button">CHEMISTRY</button>
             <br>
             <br>
           </div>
@@ -232,6 +232,19 @@
     d = n.getDate();
     document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
   </script>
+  <script>
+function mathFunction() {
+  var x = document.getElementById("myDIV");
+    x.style.display = "none";
+}
+function phyFunction() {
+  var x = document.getElementById("myDIV");
+    x.style.display = "none";
+}
+function chemFunction() {
+  var x = document.getElementById("myDIV");
+    x.style.display = "none";
+}
+</script>
 </body>
-
 </html>
