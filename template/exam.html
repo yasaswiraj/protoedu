@@ -191,6 +191,18 @@
             <br>
             <br>
           </div>
+          <div class="tq" id="submit">
+            <br>
+            <h1>Thank you!</h1>
+            <br>
+            <h4>You have completed the exam successfully</h4>
+            <hr class="bs-hr">
+            <br>
+            <h6>Your score</h6>
+            <br>
+            <br>
+            <br>
+          </div>
           <div class="qna" id="math">
             <br>
             <h1>Mathematics</h1>
@@ -232,7 +244,7 @@
               <h4>next</h4>
             </div>
             <div class="ns" style="Color:lightgreen;">
-              <h4 style="text-shadow: 1px 1px 2px #000000;">submit</h4>
+              <h4 style="text-shadow: 1px 1px 2px #000000;" onclick="submitted()">submit</h4>
             </div>
           </div>
         </div>
@@ -278,6 +290,16 @@
   </script>
 <style media="screen">
 .qna{
+  display: none;
+  opacity: 70%;
+  width: 90%;
+  margin-top: -6%;
+  height: auto;
+  position: center center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+}
+.tq{
   display: none;
   opacity: 70%;
   width: 90%;
@@ -350,6 +372,12 @@ function selected(x) {
   x.style.width = "100%";
   prev=x;
   n=1;
+}
+function submitted() {
+var x = document.getElementById("math");
+var y = document.getElementById("submit");
+  x.style.display = "none";
+  y.style.display = "inline-block";
 }
 </script>
 </body>
