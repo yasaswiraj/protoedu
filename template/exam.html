@@ -198,28 +198,28 @@
             <div class="question">
               <h4>Q1) What is the area of a rectangle with length 10 cm and breath 25cm? </h4>
               <hr class="bs-hr">
-              <div class="options" onclick="selected()">
+              <div class="options">
                 <h6>70 cm</h6>
-                <div id="opt" class="overlay">
-                  <img src="BG.png" alt="">>
+                <div id="opt" class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
                 </div>
               </div>
-              <div class="options" onclick="selected()">
+              <div class="options">
               <h6>250 cm^2</h6>
-                <div id="opt" class="overlay">
-                  <img src="BG.png" alt="">>
+                <div id="opt" class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
                 </div>
               </div>
-              <div class="options" onclick="selected()">
+              <div class="options">
               <h6>250 cm</h6>
-                <div class="overlay">
-                  <img src="BG.png" alt="">>
+                <div class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
                 </div>
               </div>
-              <div class="options" onclick="selected()">
+              <div class="options">
               <h6>70 cm^2</h6>
-                <div class="overlay">
-                  <img src="BG.png" alt="">>
+                <div class="overlay"  onclick="selected(this)">
+                  <img src="BG.png" alt="">
                 </div>
               </div>
               <br>
@@ -276,32 +276,12 @@
     d = n.getDate();
     document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
   </script>
-  <script>
-function mathFunction() {
-  var x = document.getElementById("myDIV");
-  var y = document.getElementById("math");
-    x.style.display = "none";
-    y.style.display = "inline-block";
-}
-function phyFunction() {
-  var x = document.getElementById("myDIV");
-    x.style.display = "none";
-}
-function chemFunction() {
-  var x = document.getElementById("myDIV");
-    x.style.display = "none";
-}
-function selected() {
-  var x = document.getElementById("opt");
-    x.style.width = "100%";
-}
-</script>
 <style media="screen">
 .qna{
   display: none;
   opacity: 70%;
   width: 90%;
-  margin-top: 8%;
+  margin-top: -6%;
   height: auto;
   position: center center;
   box-shadow: 5px 5px 5px;
@@ -348,5 +328,29 @@ function selected() {
   margin-left: 3%;
 }
 </style>
+<script>
+var pre;
+var n=0;
+function mathFunction() {
+var x = document.getElementById("myDIV");
+var y = document.getElementById("math");
+  x.style.display = "none";
+  y.style.display = "inline-block";
+}
+function phyFunction() {
+var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+function chemFunction() {
+var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+function selected(x) {
+  if(n==0)
+  x.style.width = "100%";
+  prev=x;
+  n=1;
+}
+</script>
 </body>
 </html>
