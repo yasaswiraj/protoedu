@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/class.css">
   <link rel="stylesheet" href="css/style1.css">
-  <link rel="stylesheet" href="css/style.css">
   
 </head>
 <body>
@@ -182,9 +181,147 @@
       </nav>
       <!-- partial -->
       <div class="main-panel">
-       
-  
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12 mb-4 mb-xl-0">
+              <h4 class="font-weight-bold text-dark">Hi, welcome back!</h4>
+              <p id="date"></p>
+            </div>
+          </div>
+            <div class="col-xl-9 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">subject Marks</h4>
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <p>Here are you subject marks progress report.</p>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="chart-legends d-lg-block d-none" id="chart-legends"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <canvas id="web-audience-metrics-satacked" class="mt-3"></canvas>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+            </div>
+            <!--Problem Solving abilities-->
+          <!--Aptitude Progress-->
+          <div class="col-xl-9 d-flex grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                  <h4 class="card-title">Aptitude Progress</h4>
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <p>Your Aptitude analysis.</p>
+                    </div>
+                    <head>
+                      <script>
+                      window.onload = function() {
+                      
+                      var chart2 = new CanvasJS.Chart("chartContainer2", {
+                        theme: "light2", // "light1", "light2", "dark1", "dark2"
+                        exportEnabled: true,
+                        animationEnabled: true,
+                        data: [{
+                          type: "pie",
+                          startAngle: 25,
+                          toolTipContent: "<b>{label}</b>: {y}%",
+                          showInLegend: "true",
+                          legendText: "{label}",
+                          indexLabelFontSize: 16,
+                          indexLabel: "{label} - {y}%",
+                          dataPoints: [
+                            { y: 51.08, label: "Verbal reasoning" },
+                            { y: 27.34, label: "Numerical/mathematical ability" },
+                            { y: 10.62, label: "Abstract reasoning" },
+                            { y: 5.02, label: "Mechanical reasoning" },
+                            { y: 4.07, label: "Space relations" },
+                            { y: 1.22, label: "Spelling" },
+                            { y: 0.44, label: "Perceptual speed and accuracy" }
+                          ]
+                        }]
+                      });
+                      chart2.render();
+                      
+                      }
+                      </script>
+                      </head>
+                      <body>
+                      <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+                      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                      </body>
+                </div>
+             </div>
+            </div>
+        </div>
+        <!--Accuracy-->
+        <div class="col-xl-9 d-flex grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Accuraccy</h4>
+                <div class="row">
+                  <div class="col-lg-5">
+                    <p>Your Accuraccy Rate.</p>
+                  </div>
+                  <!--Add Graph here-->
+                  <link href="css/speedometer.css" rel="stylesheet" type="text/css" />
+                  <body>
+                    <input id="myValues" />
+                  </body>
+                  <script src="jquery.js"></script>
+                  <script src="js/speedometer.js"></script>
+                  <script type="text/javascript">
+                    $("#myValues").myfunc({divFact:10,eventListenerType:'keyup'});
+                    $("#myValues2").myfunc({divFact:30});
+                  </script>
+              </div>
+            </div>
+           </div>
       </div>
+
+      <div class="col-xl-9 d-flex grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Insights</h4>
+              <div class="row">
+                <div class="col-lg-5">
+                  <p>Your Weekly Insights</p>
+                </div>
+                
+                <div class="col-xl-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between mb-3">
+                      </div>
+                      <div id="chart-legends-market-trend" class="chart-legends mt-1">
+                      </div>
+                      <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                          <div class="text-small"><span class="text-success">18.2%</span> Achieved </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="text-small"><span class="text-danger">0.7%</span> Target </div>
+                        </div>
+                      </div>
+                      <div class="marketTrends mt-4">
+                        <canvas id="marketTrendssatacked"></canvas>
+                      </div>
+
+                    </div>
+                  </div>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      
     </div>
   </div>
   
