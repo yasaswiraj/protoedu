@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Exam time</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="test.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css"/>
+  <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars-o.css">
+  <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.png" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search Projects.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown d-lg-flex d-none">
+                <button type="button" class="btn btn-info font-weight-bold">+ Create New</button>
+            </li>
+          <li class="nav-item dropdown d-flex">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-air-play mx-0"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal">Name1
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    The results are out
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal">User 2
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    New Test Made
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-normal"> Class Teacher
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    Bring your parents tommorow
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-flex mr-4 ">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-cog"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Settings</p>
+              <a class="dropdown-item preview-item">
+                  <i class="icon-head"></i> Profile
+              </a>
+              <a class="dropdown-item preview-item">
+                  <i class="icon-inbox"></i> Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-4 d-lg-flex d-none">
+            <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="#">
+              <i class="icon-grid"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="user-profile">
+          <div class="user-image">
+            <img src="images/faces/face28.png">
+          </div>
+          <div class="user-name">
+              User name
+          </div>
+          <div class="user-designation">
+              Occupation
+          </div>
+        </div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-box menu-icon"></i>
+              <span class="menu-title">Student Views</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-file menu-icon"></i>
+              <span class="menu-title">Take Test</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-disc menu-icon"></i>
+              <span class="menu-title">Classroom</span>
+              <i class="menu-arrow"></i>
+            </a>
+
+          </li>
+          <div class="collapse" id="ui-basic">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="">Attendance </a></li>
+              <li class="nav-item"> <a class="nav-link" href="">Test Marks</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-pie-graph menu-icon"></i>
+              <span class="menu-title">Mentors Garage </span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper2">
+          <div class="questions" id="myDIV">
+            <br>
+            <h1>Let's go!</h1>
+            <br>
+            <h4>select your subject</h4>
+            <hr class="bs-hr">
+            <button onclick="mathFunction()" class="Bs" type="button" name="button">MATHS</button>
+            <button onclick="phyFunction()" class="Bs" type="button" name="button">PHYSICS</button>
+            <button onclick="chemFunction()" class="Bs" type="button" name="button">CHEMISTRY</button>
+            <br>
+            <br>
+          </div>
+          <div class="tq" id="submit">
+            <br>
+            <h1>Thank you!</h1>
+            <br>
+            <h4>You have completed the exam successfully</h4>
+            <hr class="bs-hr">
+            <br>
+            <h6>Your score</h6>
+            <br>
+            <br>
+            <br>
+          </div>
+          <div class="qna" id="math">
+            <br>
+            <h1>Mathematics</h1>
+            <br>
+            <div class="question">
+              <h4>Q1) What is the area of a rectangle with length 10 cm and breath 25cm? </h4>
+              <hr class="bs-hr">
+              <div class="options">
+                <h6>70 cm</h6>
+                <div id="opt" class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
+                </div>
+              </div>
+              <div class="options">
+              <h6>250 cm^2</h6>
+                <div id="opt" class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
+                </div>
+              </div>
+              <div class="options">
+              <h6>250 cm</h6>
+                <div class="overlay" onclick="selected(this)">
+                  <img src="BG.png" alt="">
+                </div>
+              </div>
+              <div class="options">
+              <h6>70 cm^2</h6>
+                <div class="overlay"  onclick="selected(this)">
+                  <img src="BG.png" alt="">
+                </div>
+              </div>
+              <br>
+              <br>
+            </div>
+            <div class="ns" id="prev">
+              <h4>previous</h4>
+            </div>
+            <div class="ns">
+              <h4>next</h4>
+            </div>
+            <div class="ns" style="Color:lightgreen;">
+              <h4 style="text-shadow: 1px 1px 2px #000000;" onclick="submitted()">submit</h4>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.templatewatch.com/" target="_blank" class="text-muted">Edukare</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <i class="icon-heart"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- base:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page-->
+  <script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+  </script>
+<style media="screen">
+.bs-hr{
+  padding: 5px;
+}
+.Bs{
+  padding: 2%;
+  background-color: black;
+  opacity: 90%;
+  text-align: center;
+  font-family: cursive;
+  color: white;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .content-wrapper2 {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.documentation .content-wrapper2 {
+  padding-top: 0;
+  min-height: calc(100vh - 75px);
+}
+.content-wrapper2 {
+  padding: 2.5rem 2.5rem;
+  padding: 10%;
+  width: 100%;
+  text-align: center;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.qna{
+  display: none;
+  opacity: 70%;
+  width: 90%;
+  margin-top: -6%;
+  height: auto;
+  position: center center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+}
+.tq{
+  display: none;
+  opacity: 70%;
+  width: 90%;
+  margin-top: -6%;
+  height: auto;
+  position: center center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+}
+.options{
+  opacity: 70%;
+  width: 15%;
+  margin-top: 3%;
+  height: 5%;
+  margin-left: 3%;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  border-radius: 5px;
+  height: 100%;
+  transition: .5s ease;
+}
+.options:hover .overlay{
+  width: 100%;
+  cursor: pointer;
+}
+.options:hover h6{
+  color: black;
+  cursor: pointer;
+}
+.ns{
+  margin-left: 35%;
+  float: left;
+}
+.ns:hover h4{
+  color: black;
+  cursor: pointer;
+}
+#prev{
+  margin-left: 3%;
+}
+.questions{
+  background-image: url("BG.png");
+  display: inline-block;
+  opacity: 70%;
+  width: 50%;
+  margin-top: 2%;
+  height: auto;
+  position: center center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+}
+</style>
+<script>
+var pre;
+var n=0;
+function mathFunction() {
+var x = document.getElementById("myDIV");
+var y = document.getElementById("math");
+  x.style.display = "none";
+  y.style.display = "inline-block";
+}
+function phyFunction() {
+var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+function chemFunction() {
+var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+function selected(x) {
+  if(n==0)
+  x.style.width = "100%";
+  prev=x;
+  n=1;
+}
+function submitted() {
+var x = document.getElementById("math");
+var y = document.getElementById("submit");
+  x.style.display = "none";
+  y.style.display = "inline-block";
+}
+</script>
+</body>
+</html>
